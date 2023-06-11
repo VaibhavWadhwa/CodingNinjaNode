@@ -61,7 +61,7 @@ const userLoginController = async (req, res) => {
                 httpOnly: true,
                 secure : true,
                 domain : "https://tangerine-strudel-11ccfe.netlify.app",
-                sameSite:None,
+                sameSite:'none',
                 
             })
             res.status(200).json({
