@@ -59,8 +59,9 @@ const userLoginController = async (req, res) => {
             res.cookie("jwt", token, {
                 expires: new Date(Date.now() + 60000000),
                 httpOnly: true,
-                secure : false,
-                domain : "https://codingninja.onrender.com"
+                secure : true,
+                domain : "https://tangerine-strudel-11ccfe.netlify.app",
+                sameSite:None,
                 
             })
             res.status(200).json({
