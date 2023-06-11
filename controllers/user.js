@@ -60,7 +60,7 @@ const userLoginController = async (req, res) => {
                 expires: new Date(Date.now() + 60000000),
                 httpOnly: true,
                 secure : true,
-                domain : "https://tangerine-strudel-11ccfe.netlify.app/"
+                domain : "netlify.app"
                 
             })
             res.status(200).json({
