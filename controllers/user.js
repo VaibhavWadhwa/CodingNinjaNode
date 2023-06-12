@@ -61,7 +61,7 @@ const userLoginController = async (req, res) => {
                 httpOnly: true,
                 secure : true,
                 sameSite : "none",
-                domain : "https://codingninja.onrender.com"
+                domain : "codingninja.onrender.com"
                 
             })
             res.status(200).json({
