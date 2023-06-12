@@ -13,7 +13,7 @@ const auth = require('./middleware/auth');
 const app = express();
 
 app.use(cors({
-    origin: `https://tangerine-strudel-11ccfe.netlify.app`,
+    origin: `*`,
     credentials: true
 }))
 app.use(cookieParser())
