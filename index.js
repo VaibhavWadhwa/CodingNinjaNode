@@ -33,7 +33,10 @@ app.get("/", auth, (req, res) => {
         courses : req?.user?.courses || []
     })
 })
-
+app.use(express.static(‘client/build’));
+app.get(‘*’, (req, res) => {
+res.sendFile(path.join(__dirname + ‘/client/build/index.html’));
+});
 app.listen(config.PORT, () => {
     MongoClient.connect("mongodb+srv://Aishwarya:Aishwarya@cluster0.n2jwfug.mongodb.net/?retryWrites=true&w=majority").then(res => {
         console.log("connected to Mongo DB")
