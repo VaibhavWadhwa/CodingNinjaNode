@@ -60,7 +60,8 @@ const userLoginController = async (req, res) => {
                 expires: new Date(Date.now() + 60000000),
                 httpOnly: true,
                 secure : true,
-                sameSite : "none"
+                sameSite : "none",
+                domain : "https://codingninja.onrender.com"
                 
             })
             res.status(200).json({
